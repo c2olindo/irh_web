@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('irh_assets/css/slick-custom.css') }}"/>
 @stop
 @section('content')
-<header id="main-header" style="background:linear-gradient(rgba(30, 169, 231, 0.5),rgba(51, 57, 61, 0.5)),url({{ asset('irh_assets/images/slider1.jpg') }});height: 800px;background-size: cover;background-attachment: fixed;">
+<header id="main-header" style="background:linear-gradient(rgba(30, 169, 231, 0.5),rgba(250, 0, 0, 0)), url({{ asset('irh_assets/images/slider1.jpg') }});height: 800px;background-size: cover;background-attachment: fixed;">
 	<div class="header-content">
 		<h1 class="signika">Resources made by you. Free. Forever.</h1>
 		<form action="{{ route('theme.resources.filtered') }}" method="GET" id="search-form">

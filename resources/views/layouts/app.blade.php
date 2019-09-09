@@ -13,7 +13,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-    
+
      <link href="{{ asset('irh_assets/vendor/fontawesome/all.min.css') }}" rel="stylesheet">
      <link rel="stylesheet" href="{{ asset('irh_assets/vendor/bootstrap/bootstrap.min.css') }}" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Styles -->
@@ -35,7 +35,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
           <a class="navbar-brand pl-5" href="{{ url('/') }}">
-              <img src="{{ asset('irh_assets/images/irhsignika.png') }}" alt="" width="175" height="60">
+              <img src="{{ asset('irh_assets/images/irhsignika.png') }}" alt="" width="auto" height="35">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -45,26 +45,26 @@
               <li class="nav-item px-3">
                 <a class="nav-link" href="{{ route('theme.resources') }}">Resources</a>
               </li>
-              @auth
+              <!-- @auth
               <li class="nav-item px-3">
                 <a href="{{ route('theme.savedresources') }}" class="nav-link">Saved Resources</a>
               </li>
-              @endauth
-              <li class="nav-item px-3">
+              @endauth -->
+              <li class="nav-item px-2">
                 <a class="nav-link" href="{{ route('theme.supportus') }}">Support Us</a>
               </li>
-              <li class="nav-item px-3">
+              <li class="nav-item px-2">
                 <a class="nav-link" href="{{ route('theme.contactus') }}">Contact Us</a>
               </li>
-              <li class="nav-item px-3">
+              <li class="nav-item px-2 navBtn">
                 @auth
-                <a class="btn bg-yellow btn-block" href="{{ route('dashboard.index') }}">Dashboard</a>
+                <a class="btn bg-yellow btn-block navButton" href="{{ route('dashboard.index') }}">Dashboard</a>
                 @else
-                <a class="btn bg-yellow btn-block" href="{{ route('login') }}">Sign in</a>
+                <a class="btn bg-yellow btn-block navButton" href="{{ route('login') }}">Sign in</a>
                 @endauth
-              </li>    
+              </li>
             </ul>
-          </div>  
+          </div>
         </nav>
         <main class="">
             @yield('content')
@@ -101,7 +101,7 @@
     <script src="{{ asset('irh_assets/js/custom.js') }}"></script>
     <script>
       $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip(); 
+        $('[data-toggle="tooltip"]').tooltip();
       });
        function saveResource(res,single)
      {
@@ -128,7 +128,7 @@
               }
        });
 
-        
+
      }
     </script>
      @yield('page_scripts')

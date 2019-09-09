@@ -350,10 +350,10 @@ section#categories .categorybox img
 
 #newsletter #subscribeInput::placeholder
 {
-	color:#fff;	
-}	
+	color:#fff;
+}
 
-#newsletter #form-container 
+#newsletter #form-container
 {
 	display: grid;
 	width: 40%;
@@ -362,7 +362,7 @@ section#categories .categorybox img
 
 @media only screen and (max-width: 767px)
 {
-	#newsletter #form-container 
+	#newsletter #form-container
 	{
 		width: 100%;
 	}
@@ -422,7 +422,7 @@ header#supportusheader
 	background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(42,171,228,1) 100%);*/
 	background: var(--blue-color);
 	/*filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1);*/
-	
+
 }
 
 @media screen and (max-width: 576px)
@@ -564,3 +564,11 @@ header#supportusheader
 	}
 }
 
+/* custom CSS by S.O. */
+.nav-link {
+	font-size: 0.8rem;
+}
+.navButton {
+	font-size: 0.8rem;
+
+}
