@@ -19,6 +19,25 @@
 		</form>
 	</div>
 </header>
+
+<section id="intro_video">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="video_text">
+				<h2 id="video_heading">
+					Assalamua'alaikum,
+				</h2>
+				<p id="video_heading_text">
+					To all teachers, parents, imams and students - we're IRH; your one stop platform for sharing Islamic learning materials. Share your own resouce oe download resources made by others. You'll find a wide variety of learning materials that ranges from PowerPoint presentations to quizzes. What's better yet is that it's all for free. Watch the video to learn more about what we do.
+				</p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="video">
+				<iframe class="video" src="{{ url('https://www.youtube.com/embed/5Peo-ivmupE') }}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+</section>
+
 <section id="community_benifit" class="text-center">
 	<h1 class="heading">Join our community and benefit</h1>
 	<div class="circles pt-5">
@@ -27,6 +46,7 @@
 		<img src="{{ asset('irh_assets/images/benefit.png') }}" alt="" class="px-3 py-2">
 	</div>
 </section>
+
 <section id="categories" class="text-center">
 	<div class="container">
 		<h1 class="pb-5 text-white signika">Categories</h1>
@@ -44,6 +64,7 @@
 		</div>
 	</div>
 </section>
+
 <section id="featured_resources" class="text-center py-5">
 	<div class="container">
 		<h1 class="pb-5 heading">Featured Resources</h1>
@@ -166,7 +187,38 @@
 		</div>
 	</div>
 </section>
-<section id="newsletter" class="text-center py-5" style="background: grey;">
+<section id="media_footer" style="background: grey;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6" id="nesletter_subscription">
+				<h1 class="text-white signika">Subscribe to our mailing list</h1>
+				<p class="tagline text-white">Subscribe and keep updated on new and particular resources shared</p>
+				<form class="" action="{{ route('theme.newslettersubscription') }}" method="POST">
+					<div id="form-container">
+						<div style="grid-column: 1;">
+							<input type="text" class="form-control" id="subscribeInput" placeholder="Type your e-mail address" name="email" style="background: grey;">
+						</div>
+						<div style="grid-column: 2;">
+							<button class="btn" id="subscribeBtn" type="submit">Subscribe Now</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6" id="social_media">
+				<h1 class="text-white signika">Social Media</h1>
+				<p class="tagline text-white">Follow us on social media and stay updated</p>
+				<div class="social-btns">
+					<a class="btn facebook" href="#"><i class="fa fa-facebook"></i></a>
+					<a class="btn twitter" href="#"><i class="fa fa-twitter"></i></a>
+					<a class="btn instagram" href="#"><i class="fa fa-instagram"></i></a>
+					<a class="btn youtube" href="#"><i class="fa fa-youtube"></i></a>
+					<a class="btn ooli" href="#"><i class="fa fa-ooli"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- <section id="newsletter" class="text-center py-5" style="background: grey;">
 	<div class="container">
 		<h1 class="pb-2 text-white signika">Subscribe to our newsletter</h1>
 		<p class="pb-3 tagline text-white">Subscribe and keep updated on new and particular resources shared</p>
@@ -192,7 +244,7 @@
 		</div>
 		@endif
 	</div>
-</section>
+</section> -->
 @endsection
 @section('page_scripts')
 <script src="{{ asset('irh_assets/vendor/slick/slick.min.js') }}" id="slick_js_path"></script>

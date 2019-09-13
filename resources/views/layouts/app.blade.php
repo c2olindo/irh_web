@@ -58,9 +58,9 @@
               </li>
               <li class="nav-item px-2 navBtn">
                 @auth
-                <a class="btn bg-yellow btn-block navButton" href="{{ route('dashboard.index') }}">Dashboard</a>
+                <a class="btn button bg-yellow btn-block navButton" href="{{ route('dashboard.index') }}">Dashboard</a>
                 @else
-                <a class="btn bg-yellow btn-block navButton" href="{{ route('login') }}">Sign in</a>
+                <a class="btn button bg-yellow btn-block navButton" href="{{ route('login') }}">Sign in</a>
                 @endauth
               </li>
             </ul>
@@ -71,11 +71,7 @@
         </main>
         <footer class="bg-dark py-3 text-center">
         <div class="container">
-          <div class="social-icons">
-            <span class="px-3"><a href="https://www.facebook.com/islamicresourcehub"><img src="{{ asset('irh_assets/images/facebook.png') }}" alt="" width="30px"></a></span>
-            <span class="px-3"><a href="https://www.instagram.com/islamicresourcehub/"><img src="{{ asset('irh_assets/images/instagram.png') }}" alt="" width="30px"></a></span>
-            <span class="px-3"><a href="https://twitter.com/IslamicRH"><img src="{{ asset('irh_assets/images/twitter.png') }}" alt="" width="30px"></a></span>
-          </div>
+          
           <div class="pt-4  pb-2">
             <p class="text-white">&copy; Copyright {{ date('Y') }} All Rights Reserved | Islamic Resource Hub.</p>
           </div>
