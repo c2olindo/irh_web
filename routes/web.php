@@ -85,7 +85,7 @@ Route::prefix('dashboard')->group(function(){
 		});
 
 	/*----------  Routes for  Admin Role  ----------*/
-	
+
 	Route::prefix('admin')->group(function(){
 		Route::get('/donations','DashboardController@donations')->name('dashboard.donations');
 		Route::prefix('resources')->group(function(){
@@ -155,14 +155,12 @@ Route::prefix('dashboard')->group(function(){
 
 
 
-    Route::get('shut/the/application/down', function() 
+    Route::get('shut/the/application/down', function()
     {
         Artisan::call('down');
     });
 
-      Route::get('shut/the/application/up', function() 
+      Route::get('shut/the/application/up', function()
     {
         Artisan::call('up');
     });
-
-

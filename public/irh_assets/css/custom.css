@@ -698,3 +698,20 @@ header#supportusheader
   font-size: 38px;
   vertical-align: middle;
 }
+
+#supportus-description {
+	padding-top: 50px;
+
+}
+#supportus-description-title {
+	font-family: signika;
+	color: #4cafea;
+}
+.supportus-description-p {
+	font-family: Roboto;
+}
+.supportus-card {
+	border: solid 2px black;
+	padding: 20px;
+	margin: 10px;
+}

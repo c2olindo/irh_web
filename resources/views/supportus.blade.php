@@ -10,10 +10,32 @@
 		<a href="#" id="bottomScroller"><i class="fa fa-angle-down"></i></a>
 	</div>
 </header>
+
+<section id="supportus-description" >
+	<div class="container">
+		<h2 id="supportus-description-title">Support us and help make our future brighter.</h2>
+		<p class="supportus-description-p">“At IRH, our mission from the onset has been to facilitate a platform where teachers,
+parents and imams can get together and share Islamic resources for the benefit of the
+Ummah. What’s more is that we envisioned that this would all be for free, forever; so
+important to us was this concept that it became our moto that we cherish and live by.</p>
+
+		<p class="supportus-description-p">However, in order to sustain the project, we are in need of donations. The donations will
+help sustain the operational costs of the website, which includes paying for
+administration duties, marketing campaigns, subscriptions such as mail chimp, domain
+and hosting, as well as purchasing any required software or material needed for the
+project. In addition, we plan to introduce future phases including publications.</p>
+
+		<p class="supportus-description-p">We humbly request that you donate whatever is in your capacity; no donation is too
+small. For something little as £2.50 a month, you can help sustain IRH for years to
+come. Don’t forget, that this is a form of Sadaqah Jaariyah – a reward that keeps on
+giving.”</p>
+	</div>
+</section>
+
 <section id="supportus" class="text-center py-5">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-4 supportus-card">
 				<img src="{{ asset('irh_assets/images/spread.png') }}" alt="">
 				<div class="py-2">
 					<h3 class="text-muted">Spread the word</h3>
@@ -23,7 +45,7 @@
 					<a href="#" data-toggle="modal" data-target="#spreadWordModal" class="btn btn-block bg-yellow">Spread the Word</a>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 supportus-card">
 				<img src="{{ asset('irh_assets/images/monthly.png') }}" alt="">
 				<div class="py-2">
 					<h3 class="text-muted">Give Monthly</h3>
@@ -33,7 +55,7 @@
 					<a href="#" class="btn btn-block bg-yellow" data-toggle="modal" data-target="#monthlyDonationModal">Give Monthly</a>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 supportus-card">
 				<img src="{{ asset('irh_assets/images/now.png') }}" alt="">
 				<div class="py-2">
 					<h3 class="text-muted">Give Now</h3>

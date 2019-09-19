@@ -59,7 +59,7 @@ class ThemeController extends Controller
         $testimonials       = $this->testimonialModel->allTestimonials();
     	return view('home')->withCategories($categories)->withFeatured($featuredResources)->with('new_resources',$newResources)->withTestimonials($testimonials);
     }
-    
+
 
     /**
      *
@@ -95,7 +95,7 @@ class ThemeController extends Controller
         $resources      = $this->resourceModel->filterByTag($tag);
         return view('resources-by-tag')->withResources($resources)->withTag($tag->name);
     }
-    
+
 
 
     /**
@@ -141,7 +141,7 @@ class ThemeController extends Controller
         return redirect()->back();
     }
 
-        
+
     /**
      *
      * Add review to specific resource
@@ -174,8 +174,8 @@ class ThemeController extends Controller
         $this->resourceReviewModel->deleteReview($review);
         return redirect()->back();
     }
-    
-    
+
+
 
     /**
      *
@@ -200,7 +200,7 @@ class ThemeController extends Controller
     {
         return view('supportus');
     }
-    
+
     /**
      *
      * Make One-Time Donation
@@ -224,7 +224,7 @@ class ThemeController extends Controller
         Session::flash('success','JazakAllah! You have been subscribed to monthly donation plan');
         return redirect()->route('theme.supportus');
     }
-    
+
 
     /**
      *
@@ -236,7 +236,7 @@ class ThemeController extends Controller
         $saved_resources = $this->resourceModel->loggedInUserSavedResources();
         return view('saved-resources')->withResources($saved_resources);
     }
-    
+
 
     /**
      *
@@ -248,7 +248,7 @@ class ThemeController extends Controller
         $this->resourceModel->saveResourceAgainstLoggedInUser($request->resource);
         return response()->json(['success'=>'success'],200);
     }
-    
+
     /**
      *
      * Unsave a specific resource against some user
@@ -259,7 +259,7 @@ class ThemeController extends Controller
         $this->resourceModel->unSaveResourceFromLoggedInUser($resource);
         return redirect()->back();
     }
-    
+
 
     /**
      *
@@ -271,7 +271,7 @@ class ThemeController extends Controller
         $this->resourceLikeModel->likeResourceAgainstLoggedInUser($request->resource);
         return response()->json(['success'=>'success'],200);
     }
-    
+
 
     /**
      *
@@ -290,7 +290,7 @@ class ThemeController extends Controller
         {
             return redirect()->back();
         }
-    }    
+    }
 
 
     /**
@@ -304,7 +304,7 @@ class ThemeController extends Controller
         Session::flash('success','You have flagged this resource. We will review it soon');
         return redirect()->back();
     }
-    
+
 
     /**
      *
@@ -315,7 +315,7 @@ class ThemeController extends Controller
     {
         return view('contactus');
     }
-    
+
     /**
      *
      * Send mail to Islamic Resource Hub Admin
@@ -328,7 +328,7 @@ class ThemeController extends Controller
         return redirect()->back();
     }
 
-    
-    
-    
+
+
+
 }
