@@ -323,7 +323,12 @@ class ThemeController extends Controller
      */
     public function sendContactMail(Request $request)
     {
+      /*
         Mail::to('support@islamicresourcehub.com')->send(new ContactUs($request));
+        Session::flash('success','Message Sent Successfully!');
+        return redirect()->back();
+        */
+        Mail::to('olindo.testing@gmail.com')->send(new ContactUs($request));
         Session::flash('success','Message Sent Successfully!');
         return redirect()->back();
     }

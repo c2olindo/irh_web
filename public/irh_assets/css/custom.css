@@ -189,10 +189,23 @@ nav li.nav-item:not(:last-child)
 
 /* Community And Benifit Section */
 
-section#community_benifit
+.community_benifit
 {
-	background-color: #fff;
+	background-color: #f2f2f2;
 	padding: 60px;
+}
+
+.infographic {
+	width: 100%;
+	height: auto;
+
+}
+
+.center {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
 }
 
 @media screen and (max-width: 767px)
@@ -589,6 +602,7 @@ header#supportusheader
 
 #intro_video {
 	padding-top: 50px;
+	padding-bottom: 40px;
 }
 #video_text {
 	padding-top: 20px;
@@ -603,6 +617,7 @@ header#supportusheader
 
 .video {
 	border-radius: 15px;
+
 }
 
 /* Social Media Buttons */
@@ -703,15 +718,27 @@ header#supportusheader
 	padding-top: 50px;
 
 }
-#supportus-description-title {
+#section-title {
 	font-family: signika;
 	color: #4cafea;
 }
-.supportus-description-p {
+.section-body {
 	font-family: Roboto;
 }
-.supportus-card {
+/* .supportus-card {
 	border: solid 2px black;
 	padding: 20px;
 	margin: 10px;
 }
+.support-card {
+	font-family: Roboto;
+	text-decoration: none;
+	width: 938px;
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	right: 0;
+}
+.card_content_title {
+	color: #4cafea;
+} */

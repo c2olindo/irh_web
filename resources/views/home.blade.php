@@ -32,19 +32,23 @@
 				</p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="video">
-				<iframe class="video" src="{{ url('https://www.youtube.com/embed/5Peo-ivmupE') }}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+				<iframe class="video" src="{{ url('https://www.youtube.com/embed/CfwPlvWexYU') }}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section id="community_benifit" class="text-center">
+<section class="container-fluid community_benifit text-center">
 	<h1 class="heading">Join our community and benefit</h1>
-	<div class="circles pt-5">
+	<p style="font-family: Roboto; ">Connect with other teachers and share your resources in four easy steps!</p>
+	<div class="infographic center">
+		<img src="{{ asset('irh_assets/images/infographic.png') }}" alt="">
+	</div>
+	<!-- <div class="circles pt-5">
 		<img src="{{ asset('irh_assets/images/signup.png') }}" alt="" class="px-3 py-2">
 		<img src="{{ asset('irh_assets/images/upload.png') }}" alt="" class="px-3 py-2">
 		<img src="{{ asset('irh_assets/images/benefit.png') }}" alt="" class="px-3 py-2">
-	</div>
+	</div> -->
 </section>
 
 <section id="categories" class="text-center">
