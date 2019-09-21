@@ -195,10 +195,13 @@ nav li.nav-item:not(:last-child)
 	padding: 60px;
 }
 
+.responsive {
+  width: 100%;
+  height: auto;
+}
 .infographic {
-	width: 100%;
-	height: auto;
-
+    width: auto;
+  height: auto;
 }
 
 .center {
@@ -617,7 +620,6 @@ header#supportusheader
 
 .video {
 	border-radius: 15px;
-
 }
 
 /* Social Media Buttons */

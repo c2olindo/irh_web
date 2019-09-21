@@ -71,7 +71,7 @@
         </main>
         <footer class="bg-dark py-3 text-center">
         <div class="container">
-          
+
           <div class="pt-4  pb-2">
             <p class="text-white">&copy; Copyright {{ date('Y') }} All Rights Reserved | Islamic Resource Hub.</p>
           </div>

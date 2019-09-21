@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('irh_assets/css/slick-custom.css') }}"/>
 @stop
 @section('content')
-<header id="main-header" style="background:linear-gradient(rgba(30, 169, 231, 0.5),rgba(250, 0, 0, 0)), url({{ asset('irh_assets/images/slider1.jpg') }});height: 800px;background-size: cover;background-attachment: fixed;">
+<header id="main-header" class="responsive" style="background:linear-gradient(rgba(30, 169, 231, 0.5),rgba(250, 0, 0, 0)), url({{ asset('irh_assets/images/slider1.jpg') }});height: 800px;background-size: cover;background-attachment: fixed;">
 	<div class="header-content">
 		<h1 class="signika">Resources made by you. Free. Forever.</h1>
 		<form action="{{ route('theme.resources.filtered') }}" method="GET" id="search-form">
@@ -32,7 +32,7 @@
 				</p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="video">
-				<iframe class="video" src="{{ url('https://www.youtube.com/embed/CfwPlvWexYU') }}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+				<iframe class="video" src="{{ url('https://www.youtube.com/embed/CfwPlvWexYU') }}" width="100%" height="315px" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>
@@ -41,8 +41,8 @@
 <section class="container-fluid community_benifit text-center">
 	<h1 class="heading">Join our community and benefit</h1>
 	<p style="font-family: Roboto; ">Connect with other teachers and share your resources in four easy steps!</p>
-	<div class="infographic center">
-		<img src="{{ asset('irh_assets/images/infographic.png') }}" alt="">
+	<div class="infographic responsive">
+		<img src="{{ asset('irh_assets/images/infographic.png') }}" alt="" width="100%"  height="auto">
 	</div>
 	<!-- <div class="circles pt-5">
 		<img src="{{ asset('irh_assets/images/signup.png') }}" alt="" class="px-3 py-2">
