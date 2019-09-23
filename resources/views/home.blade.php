@@ -44,11 +44,7 @@
 	<div class="infographic responsive">
 		<img src="{{ asset('irh_assets/images/infographic.png') }}" alt="" width="100%"  height="auto">
 	</div>
-	<!-- <div class="circles pt-5">
-		<img src="{{ asset('irh_assets/images/signup.png') }}" alt="" class="px-3 py-2">
-		<img src="{{ asset('irh_assets/images/upload.png') }}" alt="" class="px-3 py-2">
-		<img src="{{ asset('irh_assets/images/benefit.png') }}" alt="" class="px-3 py-2">
-	</div> -->
+
 </section>
 
 <section id="categories" class="text-center">
@@ -71,7 +67,8 @@
 
 <section id="featured_resources" class="text-center py-5">
 	<div class="container">
-		<h1 class="pb-5 heading">Featured Resources</h1>
+		<h1 class="pb-5 heading ">Featured Resources</h1>
+		<p class="resource_heading">The most popular resources - selected by us.</p>
 		<div class="row featured_resources_slider">
 			@forelse($featured as $fr)
 			<div class="col-md-3 featured_resource_box mb-4">
@@ -91,7 +88,7 @@
 					  	@endauth
 					  </span>
 					  <div class="card-body">
-					  	<div class="pb-4"><img src="{{ asset('irh_assets/images/avatar.png') }}" alt="" width="30px" class="rounded-circle" style="display: inline-block;"><a href="{{ route('theme.resources.authorprofile',$fr->user) }}" class="ml-3">{{ $fr->user->full_name }}</a></div>
+					  	<div class="pb-4 author_profile"><img src="{{ asset('irh_assets/images/avatar.png') }}" alt="" width="20px" class="rounded-circle" style="display: inline-block;"><a href="{{ route('theme.resources.authorprofile',$fr->user) }}" class="ml-3 author_name">{{ $fr->user->full_name }}</a></div>
 					    <a href="{{ route('theme.singleresource',$fr) }}" class="text-muted"><h5 class="card-title">{{ $fr->title }}</h5></a>
 					  </div>
 					  <div class="card-footer">
@@ -115,6 +112,7 @@
 <section id="new_resources" class="text-center py-5">
 	<div class="container">
 		<h1 class="pb-5 heading">New Resources</h1>
+		<p class="resource_heading">Check out these new amazing resources.</p>
 		<div class="row new_resources_slider">
 			@forelse($new_resources as $nr)
 			<div class="col-md-3 featured_resource_box mb-4">

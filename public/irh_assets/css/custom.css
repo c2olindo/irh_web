@@ -221,6 +221,7 @@ nav li.nav-item:not(:last-child)
 
 section#community_benifit h1,.heading
 {
+	padding-bottom: 0px !important;
 	color: var(--blue-color);
 	font-family: 'Signika', sans-serif !important;
 }
@@ -288,6 +289,7 @@ section#categories .categorybox img
 .resourcebox
 {
 	    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
 }
 
 .resourcebox .card
@@ -295,6 +297,7 @@ section#categories .categorybox img
 	box-shadow: 0px 0px 10px 1px #c1c1c1b0;
 	height: 412px;
 	max-height: 412px;
+	border-radius: 15px;
 }
 
 .resourcebox .card .card-footer
@@ -309,6 +312,8 @@ section#categories .categorybox img
 .resourcebox .card img.card-img-top
 {
 	height: 168px !important;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
 }
 
 
@@ -744,3 +749,13 @@ header#supportusheader
 .card_content_title {
 	color: #4cafea;
 } */
+.resource_heading {
+	padding-bottom: 20px;
+}
+.author_profile {
+	text-align: left !important;
+}
+.author_name {
+	font-size: 12px !important;
+	margin-left: 0.3rem !important;
+}
