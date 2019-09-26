@@ -732,7 +732,8 @@ header#supportusheader
 .section-body {
 	font-family: Roboto;
 }
-/* .supportus-card {
+/*
+.supportus-card {
 	border: solid 2px black;
 	padding: 20px;
 	margin: 10px;
@@ -748,7 +749,8 @@ header#supportusheader
 }
 .card_content_title {
 	color: #4cafea;
-} */
+}
+*/
 .resource_heading {
 	padding-bottom: 20px;
 }

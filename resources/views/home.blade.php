@@ -1,9 +1,11 @@
 @extends('layouts.app')
+
 @section('page_styles')
 <link rel="stylesheet" type="text/css" href="{{ asset('irh_assets/vendor/slick/slick.css') }}"/>
 <link rel="stylesheet" type="text/css" href="{{ asset('irh_assets/vendor/slick/slick-theme.css') }}"/>
 <link rel="stylesheet" type="text/css" href="{{ asset('irh_assets/css/slick-custom.css') }}"/>
 @stop
+
 @section('content')
 <header id="main-header" class="responsive" style="background:linear-gradient(rgba(30, 169, 231, 0.5),rgba(250, 0, 0, 0)), url({{ asset('irh_assets/images/slider1.jpg') }});height: 800px;background-size: cover;background-attachment: fixed;">
 	<div class="header-content">
@@ -44,7 +46,6 @@
 	<div class="infographic responsive">
 		<img src="{{ asset('irh_assets/images/infographic.png') }}" alt="" width="100%"  height="auto">
 	</div>
-
 </section>
 
 <section id="categories" class="text-center">
@@ -109,6 +110,7 @@
 		</div>
 	</div>
 </section>
+
 <section id="new_resources" class="text-center py-5">
 	<div class="container">
 		<h1 class="pb-5 heading">New Resources</h1>
@@ -158,6 +160,7 @@
 		</div>
 	</div>
 </section>
+
 <section id="testimonials" class="text-center py-5 bg-blue" style="border: none !important;">
 	<div class="container">
 		<h1 class="pb-2 signika" style="position: relative;">Testimonials</h1>
@@ -189,6 +192,7 @@
 		</div>
 	</div>
 </section>
+
 <section id="media_footer" style="background: grey;">
 	<div class="container">
 		<div class="row">
@@ -220,7 +224,8 @@
 		</div>
 	</div>
 </section>
-<!-- <section id="newsletter" class="text-center py-5" style="background: grey;">
+<!--
+<section id="newsletter" class="text-center py-5" style="background: grey;">
 	<div class="container">
 		<h1 class="pb-2 text-white signika">Subscribe to our newsletter</h1>
 		<p class="pb-3 tagline text-white">Subscribe and keep updated on new and particular resources shared</p>
@@ -246,8 +251,10 @@
 		</div>
 		@endif
 	</div>
-</section> -->
+</section>
+-->
 @endsection
+
 @section('page_scripts')
 <script src="{{ asset('irh_assets/vendor/slick/slick.min.js') }}" id="slick_js_path"></script>
 <script src="{{ asset('irh_assets/js/slick-custom.js') }}?v={{ microtime() }}"></script>
