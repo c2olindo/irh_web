@@ -21,19 +21,20 @@
 		<div class="row">
 			<div class="col-md-8 text-left">
 				<h3 class="text-white mb-0">{{ ucwords($resource->title) }}</h3>
+				<h5 class="text-white mb-0">Author: <a href="{{ route('theme.resources.authorprofile',$resource->user->id) }}" style="color: #fff;">{{ ucwords($resource->user->full_name) }}</a></h5>
 				<div class="py-2" style="border-bottom: 1px solid #ffffff85;">
 					{!! $resource->commulativeRating($resource->reviews->count()) !!}
 					<span class="pl-2">{{ $resource->reviews->count() }} {{ str_plural('Review',$resource->reviews->count()) }}</span>
 				</div>
 				<div class="py-2">
 					<div class="float-left">
-						<h5 class="text-white mb-0">Author: <a href="{{ route('theme.resources.authorprofile',$resource->user->id) }}" style="color: #fff;">{{ ucwords($resource->user->full_name) }}</a></h5>
-						<h5 class="text-white mb-0 mt-2">Created at: {{ date('d-M-Y',strtotime($resource->created_at)) }}</h5>
+
+						<h5 class="text-white mb-0 mt-2 resource-publish-date">Published on {{ date('d-M-Y',strtotime($resource->created_at)) }}</h5>
 					</div>
 					<div class="float-right">
 						<span class="px-2"><a href="" target="_blank" class="text-white"><i class="fab fa-instagram"></i></a></span>
 						<span class="px-2"><a href="https://www.facebook.com/sharer/sharer.php?u={{ \Request::url() }}" target="_blank" class="text-white"><i class="fab fa-facebook"></i></a></span>
-			
+
 						<span class="px-2"><a href="whatsapp://send?text=IslamicResourceHub" data-action="share/whatsapp/share"  target="_blank" class="text-white"><i class="fab fa-whatsapp"></i></a></span>
 						<span class="px-2"><a href="https://twitter.com/home?status={{ \Request::url() }}" target="_blank" class="text-white"><i class="fab fa-twitter"></i></a></span>
 					</div>
@@ -56,7 +57,7 @@
 								<img src="{{ asset('irh_assets/images/savedlogo.png') }}" alt="" width="30px"> Saved
 								@endif
 								@endauth
-								
+
 							</div>
 							<div style="grid-column: 2;" id="likeContainer">
 								@auth
@@ -77,15 +78,16 @@
 <section id="single-resource" class="p-lg-5 p-md-5 p-2">
 	<div class="container">
 	<div class="description">
+		<h5 class="resource-section-heading">RESOURCE DESCRIPTION</h5>
 		{!! $resource->description !!}
 	</div>
 	<hr>
 	<div class="files py-4">
-		<h4 class="heading">File(s) Included:</h4>
+		<h5 class="resource-section-heading">PREVIEW FILES INCLUDED</h5>
 		<div>
 			<figure class="figure">
 				<img src="{{ $resource->cover_attachment_path }}" alt="" class="img-thumbnail" width="200px" height="200px">
-				<figcaption class="figure-caption ml-3"><a href="{{ route('theme.downloadresource',$resource) }}"><i class="fas fa-download"></i> Download resource file</a></figcaption>
+				<!-- <figcaption class="figure-caption ml-3"><a href="{{ route('theme.downloadresource',$resource) }}"><i class="fas fa-download"></i> Download resource file</a></figcaption> -->
 			</figure>
 		</div>
 	</div>
@@ -99,7 +101,7 @@
 	</div>
 	@endif
 	<hr>
-	@auth
+	<!-- @auth
 	<p>Report a <a href="" data-toggle="modal" data-target="#flagResourceModal">Problem</a></p>
 	@if(Session::has('success'))
 	<div class="alert alert-success">
@@ -107,8 +109,8 @@
 	</div>
 	@endif
 	<hr>
-	@endauth
-	<h4 class="heading">Review(s):
+	@endauth -->
+	<h5 class="resource-section-heading">REVIEWS</h5>
 	@auth
 	@if(!$resource->loggedInUserHasReview())
 	<a href="#" data-toggle="modal" data-target="#addReviewModal" class="btn bg-yellow btn-sm">Add a Review</a>
@@ -118,6 +120,7 @@
 	<div class="reviews">
 		@foreach($resource->reviews as $rv)
 		<div class="review py-4">
+			<!-- create this shit new -->
 			<h6 class="text-muted"><i class="fa fa-angle-right"></i> {{ $rv->user->full_name }} <span>{!! $rv->resourceStarsRatings() !!}</span>
 			@if($rv->status == 1)
 			@if($rv->user_id == Auth::id())
@@ -209,7 +212,7 @@
 					<div class="commentBy">
 						<img src="{{ asset('irh_assets/images/avatar.png') }}" alt="" width="30px" class="rounded-circle" style="display: inline-block;">
 						<p class="d-inline mt-2"><em>{{ $comment->user->full_name }}</em>
-							@if($comment->user->id == Auth::id() OR Auth::user()->hasRole('admin')) 
+							@if($comment->user->id == Auth::id() OR Auth::user()->hasRole('admin'))
 							<span class="ml-3"><a href="{{ route('theme.resources.comment.destroy',$comment) }}"><i class="fas fa-times"></i></a></span>
 							@endif
 						</p>
@@ -231,7 +234,7 @@
 			</div>
 		</div>
 	</div> --}}
-	<h4 class="heading text-center">Related Resources:</h4>
+	<h5 class="resource-section-heading">RELATED RESOURCES</h5>
 	<div class="relatedResources py-4 text-center">
 		<div class="container">
 			<div class="row">
@@ -349,7 +352,7 @@
    $(document).ready(function(){ $('.summernote').summernote(); });
    function likeResource(res)
    {
-   	
+
    	$.ajax({
 		 	  headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
 	          type: 'POST',
@@ -363,7 +366,7 @@
 		          }
 	          }
 		 });
-   	 
+
    }
 
    function getId(url) {
@@ -379,9 +382,9 @@
 
 	var videoId = getId("{{ $resource->embed_link }}");
 
-	var iframeMarkup = '<iframe  class="embed-responsive-item" width="560" height="315" src="//www.youtube.com/embed/' 
+	var iframeMarkup = '<iframe  class="embed-responsive-item" width="560" height="315" src="//www.youtube.com/embed/'
 	    + videoId + '" frameborder="0" allowfullscreen></iframe>';
 	 $('#embed_container').html(iframeMarkup);
-  
+
  </script>
 @endsection

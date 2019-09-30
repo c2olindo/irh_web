@@ -761,3 +761,10 @@ header#supportusheader
 	font-size: 12px !important;
 	margin-left: 0.3rem !important;
 }
+.resource-publish-date {
+	font-size: 12px;
+}
+.resoruce-section-heading {
+	font-size: 12px;
+	color: #818181 !important;
+}

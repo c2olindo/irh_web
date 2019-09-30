@@ -134,7 +134,7 @@
 					  	@endauth
 					  </span>
 					  <div class="card-body">
-					  	<div class="pb-4"><img src="{{ asset('irh_assets/images/avatar.png') }}" alt="" width="30px" class="rounded-circle" style="display: inline-block;"><a href="{{ route('theme.resources.authorprofile',$nr->user) }}" class="ml-3">{{ $nr->user->full_name }}</a></div>
+					  	<div class="pb-4 author_profile"><img src="{{ asset('irh_assets/images/avatar.png') }}" alt="" width="30px" class="rounded-circle" style="display: inline-block;"><a href="{{ route('theme.resources.authorprofile',$nr->user) }}" class="ml-3">{{ $nr->user->full_name }}</a></div>
 					    <a href="{{ route('theme.singleresource',$nr) }}" class="text-muted"><h5 class="card-title">{{ $nr->title }}</h5></a>
 					  </div>
 					  <div class="card-footer">
@@ -214,11 +214,11 @@
 				<h1 class="text-white signika">Social Media</h1>
 				<p class="tagline text-white">Follow us on social media and stay updated</p>
 				<div class="social-btns">
-					<a class="btn facebook" href="#"><i class="fa fa-facebook"></i></a>
-					<a class="btn twitter" href="#"><i class="fa fa-twitter"></i></a>
-					<a class="btn instagram" href="#"><i class="fa fa-instagram"></i></a>
-					<a class="btn youtube" href="#"><i class="fa fa-youtube"></i></a>
-					<a class="btn ooli" href="#"><i class="fa fa-ooli"></i></a>
+					<a href="#"> <img src="{{ asset("irh_assets/images/facebook-2.png") }}" alt=""> </a></a>
+					<a href="#"> <img src="{{ asset("irh_assets/images/twitter-2.png") }}" alt=""> </a>
+					<a href="#"> <img src="{{ asset("irh_assets/images/instagram-2.png") }}" alt=""> </i></a>
+					<a href="#"> <img src="{{ asset("irh_assets/images/youtube.png") }}" alt=""> </a>
+					<a href="#"> <img src="{{ asset("irh_assets/images/ooli.png") }}" alt=""> </a>
 				</div>
 			</div>
 		</div>
