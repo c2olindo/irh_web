@@ -20,7 +20,7 @@ class UserController extends Controller
     /*=========================================
     =        Methods for Role {admin}     =
     =========================================*/
-        
+
 
     /**
      *
@@ -40,7 +40,7 @@ class UserController extends Controller
      */
     public function create()
     {
-    	$roles = Role::all(); 
+    	$roles = Role::all();
     	return view('dashboard.users.create')->withRoles($roles);
     }
 
@@ -64,8 +64,7 @@ class UserController extends Controller
                 'last_name'         	  =>  $request->last_name,
                 'email'      			      =>  $request->email,
                 'username'      		    =>  $request->username,
-                'password'      		    =>  Hash::make($request->password),
-                'password_text' 		    =>  $request->password
+                'password'      		    =>  Hash::make($request->password)
             ]);
             if($user)
             {
@@ -99,14 +98,14 @@ class UserController extends Controller
 
     /**
      *
-     * Updates an existing user 
+     * Updates an existing user
      *
      */
     public function update(Request $request, User $user)
     {
- 		// update code here   	
+ 		// update code here
     }
-    
+
     /**
      *
      * Blocks an existing user (Admin Panel)
@@ -144,7 +143,7 @@ class UserController extends Controller
     	}
     	return redirect()->back();
     }
-    
+
 
     /**
      *
@@ -197,7 +196,7 @@ class UserController extends Controller
       }
 
     }
-    
+
 
     /**
      *
@@ -220,7 +219,7 @@ class UserController extends Controller
             $user->syncRoles(['user']);
           }
         }
-        elseif ($request->role == 'moderator') 
+        elseif ($request->role == 'moderator')
         {
           if($request->status == 1)
           {
@@ -231,7 +230,7 @@ class UserController extends Controller
             $user->syncRoles(['user']);
           }
         }
-        
+
         return response()->json(['success'=>'success'],200);
       }
       else
@@ -239,8 +238,8 @@ class UserController extends Controller
         return response()->json(['error'=>'error'],200);
       }
     }
-    
-    
+
+
 
      /*=====  End of Methods for Role {admin}  ======*/
 
@@ -248,7 +247,7 @@ class UserController extends Controller
     /*=========================================
     =            Methods for Role {user}     =
     =========================================*/
-    
+
     public function profile()
     {
         $user = Auth::user();
@@ -285,7 +284,7 @@ class UserController extends Controller
         }
         return redirect()->route('dashboard.user.profile');
         }
-        
+
         /**
          *
          * Updates profile picture
@@ -315,12 +314,12 @@ class UserController extends Controller
             }
             return redirect()->back();
         }
-        
-    
-    /*=====  End of Methods for Role {user}  ======*/
-    
 
-    
-    
-    
+
+    /*=====  End of Methods for Role {user}  ======*/
+
+
+
+
+
 }

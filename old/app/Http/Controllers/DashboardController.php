@@ -39,7 +39,7 @@ class DashboardController extends Controller
      *
      */
     public function password()
-    {     
+    {
         return view('dashboard.password');
     }
 
@@ -57,7 +57,6 @@ class DashboardController extends Controller
             $user = Auth::user();
 
             $user->password = Hash::make($request->password);
-            $user->password_text = $request->password;
             if($user->save())
             {
                 $this->success('Password Updated Successfully!');
@@ -68,7 +67,7 @@ class DashboardController extends Controller
             }
             return redirect()->back();
     }
-    
+
     public function getStatistics(Request $request)
     {
         if($request->type == 'monthly')
@@ -86,7 +85,7 @@ class DashboardController extends Controller
             $topBrowsers = Analytics::fetchTopBrowsers(Period::days(30));
             return response()->json(['browsers'=>$topBrowsers],200);
         }
-        
+
     }
 
     public function donations()
@@ -100,5 +99,5 @@ class DashboardController extends Controller
         $subscribers = Subscriber::all();
         return view('dashboard.subscribers')->withSubscribers($subscribers);
     }
-    
+
 }
