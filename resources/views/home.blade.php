@@ -164,17 +164,19 @@
 <section id="testimonials" class="text-center py-5 bg-blue" style="border: none !important;">
 	<div class="container">
 		<h1 class="pb-2 signika" style="position: relative;">Testimonials</h1>
+		<p class="" style="position: relative;">Have a look at what reputable scholars say about IRH</p>
 		<div class="testimonials_slider">
 			@forelse($testimonials as $testimonial)
 			<div class="item">
-				<div class="card card-body" style="min-height: 300px;">
+				<div class="card card-body" style="height: 250px; width: 250px;">
+				<!-- <div class="card card-body" style="min-height: 300px;"> -->
 					<div class="py-5 blue-color">
 						<p>
 							{{ $testimonial->testimonial_text }}
 						</p>
 					</div>
-					<div class="py-2">
-						<img src="{{ asset('irh_assets/images/avatar.png') }}" alt="" width="30px" class="rounded-circle" style="display: inline-block;"><span class="ml-3 blue-color">{{ ucwords($testimonial->testimonial_by) }}</span>
+					<div class="py-2" style="height: 50px; width: auto; background-color: #FFE698;">
+						<span class="blue-color">{{ ucwords($testimonial->testimonial_by) }}</span>
 					</div>
 				</div>
 			</div>
@@ -214,11 +216,11 @@
 				<h1 class="text-white signika">Social Media</h1>
 				<p class="tagline text-white">Follow us on social media and stay updated</p>
 				<div class="social-btns">
-					<a href="#"> <img src="{{ asset("irh_assets/images/facebook-2.png") }}" alt=""> </a></a>
+					<!-- <a href="#"> <img src="{{ asset("irh_assets/images/facebook-2.png") }}" alt=""> </a></a>
 					<a href="#"> <img src="{{ asset("irh_assets/images/twitter-2.png") }}" alt=""> </a>
 					<a href="#"> <img src="{{ asset("irh_assets/images/instagram-2.png") }}" alt=""> </i></a>
 					<a href="#"> <img src="{{ asset("irh_assets/images/youtube.png") }}" alt=""> </a>
-					<a href="#"> <img src="{{ asset("irh_assets/images/ooli.png") }}" alt=""> </a>
+					<a href="#"> <img src="{{ asset("irh_assets/images/ooli.png") }}" alt=""> </a> -->
 				</div>
 			</div>
 		</div>
