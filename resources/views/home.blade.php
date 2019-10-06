@@ -161,6 +161,10 @@
 	</div>
 </section>
 
+<section>
+
+</section>
+
 <section id="testimonials" class="text-center py-5 bg-blue" style="border: none !important;">
 	<div class="container">
 		<h1 class="pb-2 signika" style="position: relative;">Testimonials</h1>
@@ -197,13 +201,13 @@
 
 <section id="media_footer" style="background: grey;">
 	<div class="container">
-		<div class="row">
+		<div class="row footer">
 			<div class="col-md-6" id="nesletter_subscription">
 				<h1 class="text-white signika">Subscribe to our mailing list</h1>
 				<p class="tagline text-white">Subscribe and keep updated on new and particular resources shared</p>
 				<form class="" action="{{ route('theme.newslettersubscription') }}" method="POST">
 					<div id="form-container">
-						<div style="grid-column: 1;">
+						<div style="grid-column: 1; padding-bottom: 16px;">
 							<input type="text" class="form-control" id="subscribeInput" placeholder="Type your e-mail address" name="email" style="background: grey;">
 						</div>
 						<div style="grid-column: 2;">
@@ -216,11 +220,11 @@
 				<h1 class="text-white signika">Social Media</h1>
 				<p class="tagline text-white">Follow us on social media and stay updated</p>
 				<div class="social-btns">
-					<!-- <a href="#"> <img src="{{ asset("irh_assets/images/facebook-2.png") }}" alt=""> </a></a>
-					<a href="#"> <img src="{{ asset("irh_assets/images/twitter-2.png") }}" alt=""> </a>
-					<a href="#"> <img src="{{ asset("irh_assets/images/instagram-2.png") }}" alt=""> </i></a>
-					<a href="#"> <img src="{{ asset("irh_assets/images/youtube.png") }}" alt=""> </a>
-					<a href="#"> <img src="{{ asset("irh_assets/images/ooli.png") }}" alt=""> </a> -->
+					<a href="#"> <img class="social-icons" src="{{ asset("irh_assets/images/facebook-2.png") }}" alt=""> </a></a>
+					<a href="#"> <img class="social-icons pl-3" src="{{ asset("irh_assets/images/twitter-2.png") }}" alt=""> </a>
+					<a href="#"> <img class="social-icons pl-3" src="{{ asset("irh_assets/images/instagram-2.png") }}" alt=""> </i></a>
+					<a href="#"> <img class="social-icons pl-3" src="{{ asset("irh_assets/images/youtube.png") }}" alt=""> </a>
+					<a href="#"> <img class="social-icons pl-3" src="{{ asset("irh_assets/images/ooli.png") }}" alt=""> </a>
 				</div>
 			</div>
 		</div>

@@ -58,6 +58,7 @@
               </li>
               <li class="nav-item px-2 navBtn">
                 @auth
+                
                 <a class="btn button bg-yellow btn-block navButton" href="{{ route('dashboard.index') }}">Dashboard</a>
                 @else
                 <a class="btn button bg-yellow btn-block navButton" href="{{ route('login') }}">Sign in</a>
